@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Building HTML using JS</title>
+</head>
+<body>
+    <div class="list">
+
+    </div>
+    <script>
+        let createHTML = (text) => {
+           return '<li>' +  text + '<li>';
+        }
+        let list  = '<ul>';
+        list += createHTML('food');
+        list += createHTML('water');
+        list += createHTML('sunlight');
+        document.write(list);
+        var newList = document.createElement('ul');
+        newList.innerHtml = '<li>food<li><li>food<li><li>food<li>';
+        document.getElementsByClassName('list').appendChild(newList);
+
+    </script>
+</body>
+</html>

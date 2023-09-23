@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="getText">Get Text</button>
+    <button id="getUsers">Get Users</button>
+    <div id="output"></div>
+
+    <script>
+        document.getElementById('getText').addEventListener('click',getText);
+        document.getElementById('getUsers').addEventListener('click',getUsers)
+        // function getText(){
+        //     fetch('sapmle.txt')
+        //     .then((res)=>{
+        //         return res.text();
+        //     })
+        //     .then((d)=>{
+        //         console.log(d);
+        //     })
+        //     .catch((Err)=>{
+        //         console.log(err);
+        //     })
+        // }
+        function getUsers(){
+            fetch('users.json')
+            .then((res)=> res.json())
+            .then((d)=>{
+                console.log
+            })
+        }
+    </script>
+</body>
+</html>
